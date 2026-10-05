@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+int a, b, c;
+float S, A;
+
+printf("Please input one side of a triangle: ");
+scanf("%d", &a);
+printf("Please input another side of a triangle: ");
+scanf("%d", &b);
+printf("Please input the other side of a triangle: ");
+scanf("%d", &c);
+if (a + b > c && a + c > b && b + c > a)
+{
+    S = (a + b + c) / 2.0f;
+    A = sqrt(S * (S - a) * (S - b) * (S - c));
+    printf("The area of the triangle is: %f\n", A);
+}
+else
+{
+    printf("This is not triangle.\n");
+}
+
+return 0;
+}
